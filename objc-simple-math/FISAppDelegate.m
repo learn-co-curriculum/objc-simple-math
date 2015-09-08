@@ -14,6 +14,8 @@
      */
     
     // A. Operations With Values
+    
+    
     NSInteger i = 0;
     NSLog(@"i: %li", i);
     
@@ -47,6 +49,8 @@
     i = -3 / -5;
     NSLog(@"i: %li", i);
     
+    
+    
     NSLog(@" ");
     // B. Operations With Variables
     NSInteger a = 0;
@@ -70,8 +74,83 @@
     c = a / b;
     NSLog(@"a: %li, b: %li, c: %li", a, b, c);
     
+    
+    
+    
     NSLog(@" ");
-    // C. Using Floats
+    // C. Using Unsigned Integers
+    
+    NSUInteger u = 1;
+    NSLog(@"u: %lu", u);
+    
+    u = 2 + 3;
+    NSLog(@"u: %lu", u);
+    
+    u = 3 * 5;
+    NSLog(@"u: %lu", u);
+    
+    u = -1;
+    NSLog(@"u: %lu", u);
+    
+    u = 8 - 10;
+    NSLog(@"u: %lu", u);
+    
+    
+    
+    NSLog(@" ");
+    // D. Capturing Comparisons Into BOOLs
+    
+    BOOL threeIsEqualToThree = 3 == 3;
+    NSLog(@"3 == 3: %d", threeIsEqualToThree);
+    BOOL fourIsEqualToThree = 4 == 3;
+    NSLog(@"4 == 3: %d", fourIsEqualToThree);
+    
+    BOOL fiveIsNotEqualToThree = 5 != 3;
+    NSLog(@"5 != 3: %d", fiveIsNotEqualToThree);
+    BOOL sixIsNotEqualToSix = 6 != 6;
+    NSLog(@"6 != 6: %d", sixIsNotEqualToSix);
+    
+    NSLog(@"3 == 3: %d", 3 == 3);
+    NSLog(@"4 == 3: %d", 4 == 3);
+    NSLog(@"5 != 3: %d", 5 != 3);
+    NSLog(@"6 != 6: %d", 6 != 6);
+    
+    NSLog(@"7 < 8: %d", 7 < 8);
+    NSLog(@"8 < 5: %d", 8 < 5);
+    NSLog(@"9 < 9: %d", 9 < 9);
+    NSLog(@"10 <= 10: %d", 10 <= 10);
+    
+    NSLog(@"11 > 8: %d", 11 > 8);
+    NSLog(@"12 > 15: %d", 12 > 15);
+    NSLog(@"13 > 13: %d", 13 > 13);
+    NSLog(@"14 >= 14: %d", 14 >= 14);
+    
+    BOOL aIsEqualToB = a == b;
+    BOOL aIsGreaterThanB = a > b;
+    BOOL aIsLessThanB = a < b;
+    
+    NSLog(@"a == b: %d", aIsEqualToB);
+    NSLog(@"a > b: %d", aIsGreaterThanB);
+    NSLog(@"a < b: %d", aIsLessThanB);
+    
+    
+    
+    NSLog(@" ");
+    // E. Operation Precedence
+    NSInteger x = 2 + 3 * 5;
+    NSLog(@"x: %li", x);
+    x = (2 + 3) * 5;
+    NSLog(@"x: %li", x);
+    
+    NSInteger y = 5 - 8 * 4 + 2;
+    NSLog(@"y: %li", y);
+    y = 5 - 8 * (4 + 2);
+    NSLog(@"y: %li", y);
+
+    
+    
+    NSLog(@" ");
+    // F. Using Floats
     CGFloat f = 0.0;
     NSLog(@"f: %f", f);
     
@@ -89,7 +168,7 @@
     
     f = 0.1667 * 6;
     NSLog(@"f: %f", f);
-
+    
     f = 3 / 7;
     NSLog(@"f: %f", f);
     
@@ -115,83 +194,7 @@
     
     f = exp2(64);
     NSLog(@"f: %f", f);
-    
-    
-    
-    NSLog(@" ");
-    // D. Using Unsigned Integers
-    NSUInteger u = 1;
-    NSLog(@"u: %lu", u);
-    
-    u = 2 + 3;
-    NSLog(@"u: %lu", u);
-    
-    u = 3 * 5;
-    NSLog(@"u: %lu", u);
-    
-    u = -1;
-    NSLog(@"u: %lu", u);
-    
-    u = 8 - 10;
-    NSLog(@"u: %lu", u);
-    
-    NSLog(@" ");
-    // E. Capturing Comparisons Into BOOLs
-    BOOL isEightEqualToEight = 8 == 8;
-    NSLog(@"8 == 8: %d", isEightEqualToEight);
-    BOOL isEightEqualToSeven = 8 == 7;
-    NSLog(@"8 == 7: %d", isEightEqualToSeven);
-    
-    BOOL isEightNotEqualToSeven = 8 != 7;
-    NSLog(@"8 != 7: %d", isEightNotEqualToSeven);
-    BOOL isEightNotEqualToEight = 8 != 8;
-    NSLog(@"8 != 8: %d", isEightNotEqualToEight);
-    
-    BOOL isSixLessThanSeven = 6 < 7;
-    NSLog(@"6 < 7: %d", isSixLessThanSeven);
-    BOOL isSixLessThanFive = 6 < 5;
-    NSLog(@"6 < 5: %d", isSixLessThanFive);
-    BOOL isSixLessThanSix = 6 < 6;
-    NSLog(@"6 < 6: %d", isSixLessThanSix);
-    BOOL isSixLessThanOrEqualToSix = 6 <= 6;
-    NSLog(@"6 <= 6: %d", isSixLessThanOrEqualToSix);
-    
-    BOOL isNineGreaterThanEight = 9 > 8;
-    NSLog(@"9 > 8: %d", isNineGreaterThanEight);
-    BOOL isNineGreaterThanNine = 9 > 9;
-    NSLog(@"9 > 9: %d", isNineGreaterThanNine);
-    BOOL isNineGreaterThanOrEqualToNine = 9 >= 9;
-    NSLog(@"9 >= 9: %d", isNineGreaterThanOrEqualToNine);
-    
-    BOOL isAEqualToB = a == c;
-    NSLog(@"a == c: %d", isAEqualToB);
-    BOOL isFGreaterThanC = f > c;
-    NSLog(@"f > c: %d", isFGreaterThanC);
-    BOOL isFLessThanOrEqualToU = f <= u;
-    NSLog(@"f <= u: %d", isFLessThanOrEqualToU);
-    
-    NSLog(@" ");
-    // F. Operation Precedence
-    NSInteger x = 2 + 3 * 5;
-    NSLog(@"x: %li", x);
-    x = (2 + 3) * 5;
-    NSLog(@"x: %li", x);
-    
-    NSInteger y = 5 - 8 * 4 + 2;
-    NSLog(@"y: %li", y);
-    y = 5 - 8 * (4 + 2);
-    NSLog(@"y: %li", y);
-    
-    CGFloat z = 8 - 3 / 7;
-    NSLog(@"z: %f", z);
-    z = 8 - 3 / 7.0;
-    NSLog(@"z: %f", z);
-    z = (8 - 3) / 7.0;
-    NSLog(@"z: %f", z);
-    
-    
-    
-    
+
     
     // do not alter
     return YES;  //
