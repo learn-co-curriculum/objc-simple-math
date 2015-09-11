@@ -192,7 +192,7 @@
     f = pow(3.0, 3.0);
     NSLog(@"f: %f", f);
     
-    f = exp2(64);
+    f = exp2(63) - 1;
     NSLog(@"f: %f", f);
 
     

@@ -32,12 +32,12 @@ Open `objc-simple-math.xcodeproj` and navigate to the `FISAppDelegate.m` file. W
   * Copy your `NSLog()` to your clipboard with `⌘` `C`.
   * Run the program with `⌘` `R` to see that `i: 0` prints to the console.
 
-3. Redefine `i` to the result of adding `1` and `1` and print `i` to the console again:
+3. Reassign `i` to the result of adding `1` and `1` and print `i` to the console again:
   * `i = 1 + 1;`
-  * Use `⌘` `C` to paste your `NSLog()` a second time after the redefinition of `i`.
+  * Use `⌘` `V` to paste your `NSLog()` a second time after the reassignment of `i`.
   * Run the program with `⌘` `R` to see that `i: 2` prints to the console.
 
-4. Redefine `i` again to the result of various simple calculations. Paste in a new copy of the `NSLog()` after each redefinition of `i` so you can see each change in its value in the debug console.
+4. Reassign `i` again to the result of various simple calculations. Paste in a new copy of the `NSLog()` after each reassignment of `i` so you can see each change in its value in the debug console.
 
 You can follow the list below, or play around with your own calculations. Just make sure to use all four basic operators (`+`, `-`, `*`, and `/`):
 
@@ -56,7 +56,7 @@ This series will print:
 
 ```
 i: 0   // initial definition
-i: 2   // first redefinition
+i: 2   // first reassignment
 i: 13
 i: 2
 i: -2
@@ -77,19 +77,19 @@ i: 0
   * `NSLog(@"a: %li, b: %li, c: %li", a, b, c);`
   * Run the program with `⌘` `R` to see that `a: 0, b: 0, c: 0` prints to the console.
 
-2. Redefine `a` to equal `17` and `b` to equal `29`.
+2. Reassign `a` to equal `17` and `b` to equal `29`.
   * `a = 17;`
   * `b = 29;`
 
-3. Copy the `NSLog()` you just wrote to clipboard with `⌘` `C` and use `⌘` `V` to paste a copy of following each redefinition of any of these variables.
+3. Copy the `NSLog()` you just wrote to clipboard with `⌘` `C` and use `⌘` `V` to paste a copy of following each reassignment of any of these variables.
   * Run the program with `⌘` `R` to see that `a: 17, b: 29, c: 0` prints to the console.
-  * Notice that `c` still holds the previous result of adding `a` and `b`. *It did not automatically update when `a` and `b` were redefined.*
+  * Notice that `c` still holds the previous result of adding `a` and `b`. *It did not automatically update when `a` and `b` were reassigned.*
 
-4. Redefine `c` to equal the sum of `a` and `b` and print the variables again:
+4. Reassign `c` to equal the sum of `a` and `b` and print the variables again:
   * `c = a + b;`
   * Run the program with `⌘` `R` to see that `a: 17, b: 29, c: 46` prints to the console.
 
-5. Redefine `c` again to equal the difference, product, and quotient of `a` and `b`. Print the three variables to the console after each one:
+5. Reassign `c` again to equal the difference, product, and quotient of `a` and `b`. Print the three variables to the console after each one:
 
 ```objc
 c = a - b;
@@ -115,14 +115,14 @@ a: 17, b: 29, c: 0    // Since '17 / 26' is less than 1 it truncates to 0
   * `NSLog(@"u: %lu", u);`
   * Run the program with `⌘` `R` to see that `u: 1` prints to the console.
 
-2 — Redefine `u` to the results of simple calculations:
+2 — Reassign `u` to the results of simple calculations:
 
   * `u = 2 + 3;`
   * `NSLog(@"u: %lu", u);` will print `u: 5`.
   * `u = 2 * 3;`
   * `NSLog(@"u: %lu", u);` will print `u: 6`.
 
-3 — Now redefine `u` to `-1` (negative one).
+3 — Now reassign `u` to `-1` (negative one).
 
   * `u = -1;`
   * You should see a warning like this pop up:
@@ -131,7 +131,7 @@ a: 17, b: 29, c: 0    // Since '17 / 26' is less than 1 it truncates to 0
 
   * Now, run the program with `⌘` `R`, you should see `u: 18446744073709551615` print from this last `NSLog()`. Leave the warning in place and continue.
 
-4 — Now redefine `u` to the result of calculation that will be a negative value, such as `8 - 10`:
+4 — Now reassign `u` to the result of calculation that will be a negative value, such as `8 - 10`:
 
   * `u = 8 - 10;`
   * You should see a similar warning pop up:
@@ -284,15 +284,15 @@ y: -43
   * `NSLog(@"f: %f", f);`
   * Run the program with `⌘` `R` to see that `f: 0.000000` prints to the console.
 
-3. Redefine `f` to equal the the quotient of dividing `17` by `29`. Copy and paste your `NSLog()` after the redefinition to print the new value to the console:
+3. Reassign `f` to equal the the quotient of dividing `17` by `29`. Copy and paste your `NSLog()` after the reassignment to print the new value to the console:
   * `f = 17 / 29;`
   * Run the program with `⌘` `R` to see that `f: 0.000000` still prints to the console. The division operator is returning an integer value as the result of the operation.
 
-4. Redefine `f` with same equation but write at least one of the values as float by using a decimal point and zero:
+4. Reassign `f` with same equation but write at least one of the values as float by using a decimal point and zero:
   * `f = 17 / 29.0;`
   * Paste another `NSLog()` and run the program again. You should see `f: 0.586207` printed to the console.
 
-5. Redefine `f` to equal a few more simple calculations. Any time you use the division operator (`/`), define at least one operand as a float value.
+5. Reassign `f` to equal a few more simple calculations. Any time you use the division operator (`/`), define at least one operand as a float value.
 
 ```objc
 1 + 2.5
@@ -319,7 +319,7 @@ f: 0.428571   // result of 3 / 7.0
 
 If you're feeling adventurous, take a quick dip into the `math.h` library defined in the C-language.
 
-1. Redefine `f` to equal the definition of *pi* `M_PI`, then print `f` again:
+1. Reassign `f` to equal the definition of *pi* `M_PI`, then print `f` again:
   * `f = M_PI;`
   * You should see `f: 3.141593` print to the console.
 
@@ -338,6 +338,6 @@ If you're feeling adventurous, take a quick dip into the `math.h` library define
 
 6. Now use the `pow(x, y)` function to find the cube of 3.
 
-7. Finally, use the `exp2(x)` function to find the highest value of a 64-bit integer.
+7. Finally, use the `exp2(x)` function to find the highest value of a signed 64-bit integer. **Hint:** *This is equal to* 2^63 - 1.
 
 
