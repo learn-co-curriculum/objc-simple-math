@@ -145,7 +145,7 @@ At the end of this code-along your console should print something like:
 ```
 u: 1
 u: 5
-u: 15
+u: 6
 u: 18446744073709551615
 u: 18446744073709551614
 ```
