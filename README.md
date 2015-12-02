@@ -341,3 +341,5 @@ If you're feeling adventurous, take a quick dip into the `math.h` library define
 7. Finally, use the `exp2(x)` function to find the highest value of a signed 64-bit integer. **Hint:** *This is equal to* 2^63 - 1.
 
 
+
+<a href='https://learn.co/lessons/objc-simple-math' data-visibility='hidden'>View this lesson on Learn.co</a>
