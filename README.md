@@ -324,7 +324,7 @@ If you're feeling adventurous, take a quick dip into the `math.h` library define
   * You should see `f: 3.141593` print to the console.
 
 2. But how precise is that definition of *pi*? The default format specifier rounds it to the sixth decimal place. Try using the long-form float format specifier (`%.nf`) to see how many decimals of *pi* that `math.h` knows:
-  * `NSLog(@"f: %.12f", f);`, thought it's more than twelve.
+  * `NSLog(@"f: %.12f", f);`, though it's more than twelve.
 
 3. Use the `math.h` C-function `sqrt(x)` to calculate the square root of `2`.
   * `f = sqrt(2);`
