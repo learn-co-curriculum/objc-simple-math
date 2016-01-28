@@ -342,4 +342,4 @@ If you're feeling adventurous, take a quick dip into the `math.h` library define
 
 
 
-<a href='https://learn.co/lessons/objc-simple-math' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/objc-simple-math' title='Code-Along: Simple Math'>Code-Along: Simple Math</a> on Learn.co and start learning to code for free.</p>
